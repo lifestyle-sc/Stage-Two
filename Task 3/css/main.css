@@ -1,0 +1,312 @@
+:root {
+  --primary-color: #333333;
+  --secondary-color: #e3e3e3;
+  --grid-gap: 1rem;
+  --font-size: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* utilities */
+.container {
+  max-width: 1100px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.img-1 {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.img-2{
+    float: left;
+    margin-right: 0.3rem;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.head2{
+    font-weight: 350;
+    border-bottom: 1px solid #7d7d7d;
+    padding-bottom: 0.5rem;
+}
+
+.lead{
+    margin-bottom: 0.2rem;
+}
+
+.dim{
+    opacity: 0.8;
+}
+
+ul{
+    list-style: none;
+}
+
+/* main styles */
+body {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+#grid {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+#main-header {
+  grid-area: header;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#profile-name {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+#profile-desc{
+    width: 100%;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+}
+
+/* resume body */
+#resume-body{
+    grid-area: main;
+    margin-bottom: 1rem;
+    padding: 1rem 1.4rem;
+}
+/* work history */
+.work{
+    display: flex;
+    margin-bottom: 1.2rem;
+}
+
+.work .date{
+    padding: 0.2rem 0.5rem;
+}
+
+.work .work-title{
+    padding: 0.2rem 1rem;
+}
+
+.work .work-title h4{
+    margin-bottom: 0.5rem;
+}
+
+.work .work-title ul{
+    padding: 0.2rem 1.2rem;
+    list-style: square;
+}
+
+.work .work-title ul li{
+    padding: 0.2rem;
+}
+
+
+/* education */
+.degree{
+    display: flex;
+}
+
+.degree .degree-space{
+    width: 4.7rem
+}
+
+.degree .degree-title h4{
+    padding: 0.2rem 1rem;
+}
+
+.degree .degree-title p{
+    padding: 0.2rem 1rem;
+}
+
+
+/* resume aside */
+#resume-aside{
+    grid-area: sidebar;
+    padding: 1rem 1.4rem;
+}
+
+.contact{
+    margin-bottom: 1rem;
+}
+.contact ul li{
+    padding: 0.3rem;
+}
+
+.skills{
+    margin-bottom: 1rem;
+}
+
+.skills ul li{
+    padding: 0.3rem;
+}
+
+.comment{
+    margin-bottom: 1rem;
+    padding: 0.5rem
+}
+
+/* Footer */
+#footer{
+    grid-area: footer;
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+
+/* Media Queries for max-width 0f 900px & min-width of 780px */
+@media screen and (max-width: 900px) and (min-width: 801px){
+    #profile-name{
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Queries for max-width 0f 770px & min-width of 501px  */
+@media screen and (max-width: 800px) and (min-width: 401px){
+    .img-1{
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.8rem;
+    }
+
+    .container{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #profile-name{
+        font-size: 2rem;
+        margin-bottom: 0.9rem;
+    }
+
+    #profile-desc{
+        width: 100%;
+    }
+
+    #grid{
+        display: block;
+    }
+
+    .head2{
+        text-align: center;
+    }
+
+    .degree{
+        display: block;
+    }
+    .degree .degree-space{
+        display: none;
+    }
+
+    .degree .degree-title{
+        text-align: center;
+    }
+
+    .contact ul li i,
+    .skills ul li i{
+        display: none;
+    }
+
+    .contact ul,
+    .skills ul li{
+        text-align: center;
+    }
+
+}
+
+/* Media Queries for max-width 0f 400px */
+@media screen and (max-width: 400px){
+    .img-1{
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.8rem;
+    }
+
+    .container{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #profile-name{
+        font-size: 1.6rem;
+        margin-bottom: 0.9rem;
+    }
+
+    #profile-desc{
+        width: 100%;
+    }
+
+    #grid{
+        display: block;
+    }
+
+    .head2{
+        text-align: center;
+    }
+
+    .work{
+        display: block;
+    }
+
+    .work .date ul{
+        text-align: center;
+    }
+
+    .border-top{
+        border-top: 1px solid #7d7d7d;
+    }
+
+    .work .date ul li{
+        display: inline-block;
+    }
+
+    .degree{
+        display: block;
+    }
+    .degree .degree-space{
+        display: none;
+    }
+
+    .degree .degree-title{
+        text-align: center;
+    }
+
+    .contact ul li i,
+    .skills ul li i{
+        display: none;
+    }
+
+    .contact ul,
+    .skills ul li{
+        text-align: center;
+    }
+
+    
+}
